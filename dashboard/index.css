@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-shadow: 1px 1px 20px #999999;
+    font-size: .95rem;
+}
+
+main,
+.top,
+#stocks,
+#weather {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 1.7em 1.5em;
+    flex-direction: column;
+}
+
+.top {
+    height: 20%;
+}
+
+#time {
+    padding-bottom: 1.3em;
+    text-align: center;
+    font-size: 5.5em;
+}
+
+p,
+#time, 
+h4,
+h1 {
+    margin: 0
+}
+
+#stocks {
+    flex-direction: column;
+    align-items: center;
+}
+
+.name-container {
+    display: flex;
+    align-items: center;
+}
+
+.name-container > img {
+    width: 2.7em;
+    height: 2.7em;
+    margin-right: 1em;
+}
+
+.price-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    text-shadow: inherit;
+    font-family: 'Inter', sans-serif;
+}
+
+.price-container > p {
+    margin-right: .5em;
+}
+
+#arrow-down,
+#arrow-up {
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-down {
+    border-width: 13px 8px 0 8px;
+    border-color: #ff0000 transparent transparent transparent; 
+}
+
+#arrow-up {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 13px 8px;
+    border-color: transparent transparent #147719 transparent;
+}
+
+#weather {
+    flex-direction: column;
+    max-height: 100%;
+}
+
+#weather img {
+    width: 2.4em;
+    height: 2.4em;
+}
+
+#weather h1 {
+    font-weight: 400;
+}
+
+.weather-cond {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 530px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    main {
+        padding: 1.5em 2em;
+    }
+    
+    #stocks > img {
+        width: 3em;
+        height: 3em;
+    }
+}
